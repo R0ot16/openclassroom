@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-8">
+        <li [ngClass]="{'list-group-item': true,
+        'list-group-item-success': loveIts > 0,
+        'list-group-item-danger': loveIts < 0,
+        'list-group-item-info': loveIts === 0}" style="color: black;">
+    <h2>{{ title }}</h2> <h5>Par: {{ author }} - {{ date }} </h5><hr>
+    <p>{{ content }}</p>
+    
+    <button class="btn btn-danger" *ngIf="isConnected" (click)="removeOneLike()">Don't like it..</button>
+    <button class="btn btn-success" *ngIf="isConnected" (click)="addOneLike()">I like it !</button>
+    <p>Score : {{ loveIts }}</p>
+    </li>
+    
+    </div>
+      
+</div>
+
+
+<br>
